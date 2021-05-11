@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -24,7 +17,8 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div class="container is-fullhd">
+  
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -37,14 +31,21 @@ const Layout = ({ children }) => {
         <footer
           style={{
             marginTop: `2rem`,
+            position : 'fixed',
+            left: 0,
+            bottom: 0,
+            width: '100%',
+            color: 'black',
+            textAlign: 'center',
+            fontFamily: 'Cursive'
           }}
         >
-          © {new Date().getFullYear()}, Built with
+          © {new Date().getFullYear()}, Built with love by
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="mailto:mehdilebenz@gmail.com">Mehdi Benzarti</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

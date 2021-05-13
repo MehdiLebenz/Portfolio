@@ -75,9 +75,11 @@ return(
       <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons">
+        <Link to="contact"  >
           <a className="button is-primary">
             <strong>Contact me</strong>
           </a>
+          </Link>
           </div>
           </div>
           </div>

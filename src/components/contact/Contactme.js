@@ -1,11 +1,10 @@
 
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { TextField, Checkbox, Radio, Select } from 'final-form-material-ui';
+import { TextField, Checkbox } from 'final-form-material-ui';
 import {
   Typography,
   Paper,
-  Link,
   Grid,
   Button,
   CssBaseline,
@@ -16,19 +15,16 @@ import {
   FormControl,
   FormControlLabel,
 } from '@material-ui/core';
-// Picker
 import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
-  TimePicker,
-  DatePicker,
+
 } from '@material-ui/pickers';
 
 
 const onSubmit = async values => {
   const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
   await sleep(300);
-  window.alert(JSON.stringify(values, 0, 2));
 };
 const validate = values => {
   const errors = {};

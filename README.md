@@ -1,14 +1,14 @@
-<p>
-Hello 
+
+# Hello 
 This is personal blog and cv made by Mehdi Benzarti using Gatsby Starter 
 Licence MIT
-<p>
 
-<h2> How to install & run the projet </h2>
 
-<h1> <strong> you have to clone it </strong></h1>
-<h1> <strong>run Yarn or npm install </strong></h1>
-<h1> <strong> gatsby develop to run the projet on localhost://8000 </strong></h1>
+# How to install & run the projet 
+
+#  you have to clone it
+# run Yarn or npm install 
+ # gatsby develop to run the projet on localhost://8000 
 
 
 <h2> 

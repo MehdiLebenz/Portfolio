@@ -17,7 +17,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div class="container is-fullhd">
+    <div className="">
   
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
@@ -37,7 +37,6 @@ const Layout = ({ children }) => {
             width: '100%',
             color: 'black',
             textAlign: 'center',
-            fontFamily: 'Cursive'
           }}
         >
           © {new Date().getFullYear()}, Built with love by

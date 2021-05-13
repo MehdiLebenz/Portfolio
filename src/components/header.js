@@ -18,9 +18,9 @@ import { Link } from "gatsby"
 //         const target = el.dataset.target;
 //         const $target = document.getElementById(target);
 
-//         // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-//         el.classList.toggle('is-active');
-//         target.classList.toggle('is-active');
+//         // Toggle the "is-active" className on both the "navbar-burger" and the "navbar-menu"
+//         el.classNameList.toggle('is-active');
+//         target.classNameList.toggle('is-active');
 
 //       });
 //     });
@@ -31,50 +31,40 @@ import { Link } from "gatsby"
 const Header = ({  }) => (
   
   <header>
-            <div class="container is-fullhd">
+            <div className="container is-fullhd">
 
-<nav class="navbar" role="navigation" aria-label="main navigation" >
-    <a role="button" class="navbar-burger is active" aria-label="menu" aria-expanded="false" >
+<nav className="navbar" role="navigation" aria-label="main navigation" >
+    <a role="button" className="navbar-burger is active" aria-label="menu" aria-expanded="false" >
       <span aria-hidden="true"> </span>
       <span aria-hidden="true">  </span>
       <span aria-hidden="true"></span>
     </a>
-    <div id="navbarBasicExample" class="navbar-menu">
-    <div class="navbar-start">
-    <div class="navbar-item">
+    <div id="navbarBasicExample" className="navbar-menu">
+    <div className="navbar-start">
+    <div className="navbar-item">
     <Link to="/" >
 
-      <a class="navbar-item">
+      <a className="navbar-item">
         Home
       </a>
       </Link>
       </div>
 
-      <div class="navbar-item">
+      <div className="navbar-item">
       <Link to="/page-2/"  >
-      <a class="navbar-item">
-        Page 2  
+      <a className="navbar-item">
+        Blog
       </a>
       </Link>
       </div>
-      <a class="navbar-item">
-        Documentation
+      <a className="navbar-item">
+        Project
       </a>
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item">
-            About
-          </a>
-        </div>
       </div>
-      </div>
-      <div class="navbar-end">
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button is-primary">
+      <div className="navbar-end">
+      <div className="navbar-item">
+        <div className="buttons">
+          <a className="button is-primary">
             <strong>Contact me</strong>
           </a>
           </div>

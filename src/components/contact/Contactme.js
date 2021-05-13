@@ -1,51 +1,191 @@
-import * as React from "react"
 
-const ContactForm = () => {
-  return <div>
+import React from 'react';
+import { Form, Field } from 'react-final-form';
+import { TextField, Checkbox, Radio, Select } from 'final-form-material-ui';
+import {
+  Typography,
+  Paper,
+  Link,
+  Grid,
+  Button,
+  CssBaseline,
+  RadioGroup,
+  FormLabel,
+  MenuItem,
+  FormGroup,
+  FormControl,
+  FormControlLabel,
+} from '@material-ui/core';
+// Picker
+import DateFnsUtils from '@date-io/date-fns';
+import {
+  MuiPickersUtilsProvider,
+  TimePicker,
+  DatePicker,
+} from '@material-ui/pickers';
 
-<div class="container">
-  <div class="row header">
-    <h1>CONTACT US &nbsp;</h1>
-    <h3>Fill out the form below to learn more!</h3>
-  </div>
-  <div class="row body">
-  <form method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
-   <input type="hidden" name="bot-field" />
-   <input type="hidden" name="form-name" value="contact" />      <ul>
-        
-        <li>
-          <p class="left">
-            <label for="first_name">first name</label>
-            <input type="text" name="first_name" placeholder="John" />
-          </p>
-          <p class="pull-right">
-            <label for="last_name">last name</label>
-            <input type="text" name="last_name" placeholder="Smith" />      
-          </p>
-        </li>
-        
-        <li>
-          <p>
-            <label for="email">email <span class="req">*</span></label>
-            <input type="email" name="email" placeholder="john.smith@gmail.com" />
-          </p>
-        </li>        
-        <li><div class="divider"></div></li>
-        <li>
-          <label for="comments">comments</label>
-          <textarea cols="46" rows="3" name="comments"></textarea>
-        </li>
-        
-        <li>
-          <input class="btn btn-submit" type="submit" value="Submit" />
-          <small>or press <strong>enter</strong></small>
-        </li>
-        
-      </ul>
-    </form>  
-  </div>
-</div>
-  </div>
+
+const onSubmit = async values => {
+  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+  await sleep(300);
+  window.alert(JSON.stringify(values, 0, 2));
+};
+const validate = values => {
+  const errors = {};
+  if (!values.firstName) {
+    errors.firstName = 'Required';
+  }
+  if (!values.lastName) {
+    errors.lastName = 'Required';
+  }
+  if (!values.email) {
+    errors.email = 'Required';
+  }
+  return errors;
+};
+
+function ContactForm() {
+  return (
+    <div style={{ padding: 16, margin: 'auto', maxWidth: 600 }}>
+      <CssBaseline />
+      <Typography variant="h4" align="center" component="h1" gutterBottom>
+        Contact me now
+      </Typography>
+      <Form
+        onSubmit={onSubmit}
+        initialValues={{ employed: true, stooge: 'larry' }}
+        validate={validate}
+        render={({ handleSubmit, reset, submitting, pristine, values }) => (
+          <form onSubmit={handleSubmit} method="post"
+          etlify-honeypot="bot-field"
+          data-netlify="true" 
+          name="contact" noValidate>
+            <Paper style={{ padding: 16 }}>
+              <Grid container alignItems="flex-start" spacing={2}>
+                <Grid item xs={6}>
+                  <Field
+                    fullWidth
+                    required
+                    name="firstName"
+                    component={TextField}
+                    type="text"
+                    label="First Name"
+                  />
+                    <input type="hidden" name="bot-field" />
+  <input type="hidden" name="form-name" value="contact" />
+                </Grid>
+                <Grid item xs={6}>
+                  <Field
+                    fullWidth
+                    required
+                    name="lastName"
+                    component={TextField}
+                    type="text"
+                    label="Last Name"
+                  />
+                </Grid>
+                <Grid item xs={12}>
+                  <Field
+                    name="email"
+                    fullWidth
+                    required
+                    component={TextField}
+                    type="email"
+                    label="Email"
+                  />
+                </Grid>
+
+                <Grid item>
+                  <FormControl component="fieldset">
+                    <FormLabel component="legend">You need ? </FormLabel>
+                    <FormGroup row>
+                      <FormControlLabel
+                        label="Agile Coaching"
+                        control={
+                          <Field
+                            name="Agile Coaching"
+                            component={Checkbox}
+                            type="checkbox"
+                            value="yes"
+                          />
+                        }
+                      />
+                      <FormControlLabel
+                        label="Projet Management"
+                        control={
+                          <Field
+                            name="Projet Management"
+                            component={Checkbox}
+                            type="checkbox"
+                            value="yes"
+                          />
+                        }
+                      />
+                      <FormControlLabel
+                        label="Marketing Service"
+                        control={
+                          <Field
+                            name="Marketing Service"
+                            component={Checkbox}
+                            type="checkbox"
+                            value="yes"
+                          />
+                        }
+                      />
+                      <FormControlLabel
+                        label="Web dev"
+                        control={
+                          <Field
+                            name="Web dev"
+                            component={Checkbox}
+                            type="checkbox"
+                            value="yes"
+                          />
+                        }
+                      />
+                    </FormGroup>
+                  </FormControl>
+                </Grid>
+                <Grid item xs={12}>
+                  <Field
+                    fullWidth
+                    name="notes"
+                    component={TextField}
+                    multiline
+                    label="Notes"
+                  />
+                </Grid>
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                </MuiPickersUtilsProvider>
+                <Grid item style={{ marginTop: 16 }}>
+                  <Button
+                    type="button"
+                    variant="contained"
+                    onClick={reset}
+                    disabled={submitting || pristine}
+                  >
+                    Reset
+                  </Button>
+                </Grid>
+                <Grid item style={{ marginTop: 16 }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    type="submit"
+                    disabled={submitting}
+                  >
+                    Submit
+                  </Button>
+                </Grid>
+              </Grid>
+            </Paper>
+          </form>
+        )}
+      />
+    </div>
+  );
 }
+
+
 
 export default ContactForm

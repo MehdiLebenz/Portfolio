@@ -28,18 +28,27 @@ import { Link } from "gatsby"
 
 // });
 
-const Header = ({  }) => (
-  
+function Header() {
+  const [isActive, setisActive] = React.useState(false);
+return(
   <header>
             <div className="container is-fullhd">
 
 <nav className="navbar" role="navigation" aria-label="main navigation" >
-    <a role="button" className="navbar-burger is active" aria-label="menu" aria-expanded="false" >
+    <a role="button" className="navbar-burger is active" aria-label="menu" aria-expanded="false"  onClick={() => {
+              setisActive(!isActive);
+            }}
+            role="button"
+            className={`navbar-burger burger ${isActive ? "is-active" : ""}`}
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample" >
       <span aria-hidden="true"> </span>
       <span aria-hidden="true">  </span>
       <span aria-hidden="true"></span>
     </a>
-    <div id="navbarBasicExample" className="navbar-menu">
+    <div id="navbarBasicExample"
+          className={`navbar-menu ${isActive ? "is-active" : ""}`}>
     <div className="navbar-start">
     <div className="navbar-item">
     <Link to="/" >
@@ -57,9 +66,11 @@ const Header = ({  }) => (
       </a>
       </Link>
       </div>
+      <div className="navbar-item">
       <a className="navbar-item">
         Project
       </a>
+      </div>
       </div>
       <div className="navbar-end">
       <div className="navbar-item">
@@ -77,7 +88,8 @@ const Header = ({  }) => (
 </nav>
 </div>
   </header>
-)
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

@@ -3,7 +3,10 @@ import ContactForm from '../components/contact/Contactme'
 
 const ContactPage = ()=>{
     return(
-        <ContactForm/>
+        <div>
+                    <ContactForm/>
+
+        </div>
     )
 }
 export default ContactPage

@@ -1,187 +1,126 @@
-
 import React from 'react';
-import { Form, Field } from 'react-final-form';
-import { TextField, Checkbox } from 'final-form-material-ui';
-import {
-  Typography,
-  Paper,
-  Grid,
-  Button,
-  CssBaseline,
-  RadioGroup,
-  FormLabel,
-  MenuItem,
-  FormGroup,
-  FormControl,
-  FormControlLabel,
-} from '@material-ui/core';
-import DateFnsUtils from '@date-io/date-fns';
-import {
-  MuiPickersUtilsProvider,
-
-} from '@material-ui/pickers';
+import Avatar from '@material-ui/core/Avatar';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Checkbox from '@material-ui/core/Checkbox';
+import Grid from '@material-ui/core/Grid';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Layout from '../layout'
+import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 
 
-const onSubmit = async values => {
-  const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-  await sleep(300);
-};
-const validate = values => {
-  const errors = {};
-  if (!values.firstName) {
-    errors.firstName = 'Required';
-  }
-  if (!values.lastName) {
-    errors.lastName = 'Required';
-  }
-  if (!values.email) {
-    errors.email = 'Required';
-  }
-  return errors;
-};
 
-function ContactForm() {
+const useStyles = makeStyles((theme) => ({
+    
+  paper: {
+    marginTop: theme.spacing(1),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+  avatar: {
+    margin: theme.spacing(1),
+    backgroundColor: '#3099B0',
+  },
+  form: {
+    width: '100%', // Fix IE 11 issue.
+    marginTop: theme.spacing(3),
+  },
+  submit: {
+    margin: theme.spacing(3, 0, 2),
+    backgroundColor: '#3099B0',
+    color: 'white'
+  },
+}));
+
+export default function ContactForm() {
+  const classes = useStyles();
+
   return (
-    <div style={{ padding: 16, margin: 'auto', maxWidth: 600 }}>
-      <CssBaseline />
-      <Typography variant="h4" align="center" component="h1" gutterBottom>
-        Contact me now
-      </Typography>
-      <Form
-        onSubmit={onSubmit}
-        initialValues={{ employed: true, stooge: 'larry' }}
-        validate={validate}
-        render={({ handleSubmit, reset, submitting, pristine, values }) => (
-          <form onSubmit={handleSubmit} method="post"
-          etlify-honeypot="bot-field"
-          data-netlify="true" 
-          name="contact" noValidate>
-            <Paper style={{ padding: 16 }}>
-              <Grid container alignItems="flex-start" spacing={2}>
-                <Grid item xs={6}>
-                  <Field
-                    fullWidth
-                    required
-                    name="firstName"
-                    component={TextField}
-                    type="text"
-                    label="First Name"
-                  />
-                    <input type="hidden" name="bot-field" />
-  <input type="hidden" name="form-name" value="contact" />
-                </Grid>
-                <Grid item xs={6}>
-                  <Field
-                    fullWidth
-                    required
-                    name="lastName"
-                    component={TextField}
-                    type="text"
-                    label="Last Name"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <Field
-                    name="email"
-                    fullWidth
-                    required
-                    component={TextField}
-                    type="email"
-                    label="Email"
-                  />
-                </Grid>
+      <Layout>
+    <Container component="main" maxWidth="xs">
+      <div className={classes.paper}>
+        <Avatar className={classes.avatar}>
+          <ContactMailIcon />
+        </Avatar>
+        <Typography component="h1" variant="h5">
+          Sign up
+        </Typography>
+         <form  className={classes.form} method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact">
+   <input type="hidden" name="bot-field" />
+   <input type="hidden" name="form-name" value="contact" />
+          <Grid container spacing={2}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                autoComplete="fname"
+                name="firstName"
+                variant="outlined" 
+                required
+                fullWidth
+                id="firstName"
+                label="First Name"
+                autoFocus
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="lastName"
+                label="Last Name"
+                name="lastName"
+                autoComplete="lname"
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="email"
+                label="Email Address"
+                name="email"
+                autoComplete="email"
+              />
+            </Grid>
+            <Grid item xs={12}>
+            <TextField 
+            
+  rowsMax={4}
+  aria-label="maximum height"
+  label="how can i help you ? "
+  fullWidth
+  variant="outlined"
+/>
+              
+            </Grid>
+            <Grid item xs={12}>
+              <FormControlLabel
+                control={<Checkbox value="allowExtraEmails" color="primary" />}
+                label="I want to receive inspiration, marketing promotions and updates via email."
+              />
+            </Grid>
 
-                <Grid item>
-                  <FormControl component="fieldset">
-                    <FormLabel component="legend">You need ? </FormLabel>
-                    <FormGroup row>
-                      <FormControlLabel
-                        label="Agile Coaching"
-                        control={
-                          <Field
-                            name="Agile Coaching"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="yes"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Projet Management"
-                        control={
-                          <Field
-                            name="Projet Management"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="yes"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Marketing Service"
-                        control={
-                          <Field
-                            name="Marketing Service"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="yes"
-                          />
-                        }
-                      />
-                      <FormControlLabel
-                        label="Web dev"
-                        control={
-                          <Field
-                            name="Web dev"
-                            component={Checkbox}
-                            type="checkbox"
-                            value="yes"
-                          />
-                        }
-                      />
-                    </FormGroup>
-                  </FormControl>
-                </Grid>
-                <Grid item xs={12}>
-                  <Field
-                    fullWidth
-                    name="notes"
-                    component={TextField}
-                    multiline
-                    label="Notes"
-                  />
-                </Grid>
-                <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                </MuiPickersUtilsProvider>
-                <Grid item style={{ marginTop: 16 }}>
-                  <Button
-                    type="button"
-                    variant="contained"
-                    onClick={reset}
-                    disabled={submitting || pristine}
-                  >
-                    Reset
-                  </Button>
-                </Grid>
-                <Grid item style={{ marginTop: 16 }}>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    type="submit"
-                    disabled={submitting}
-                  >
-                    Submit
-                  </Button>
-                </Grid>
-              </Grid>
-            </Paper>
-          </form>
-        )}
-      />
-    </div>
+          </Grid>
+          <Button
+            type="submit"
+            fullWidth
+            variant="contained"
+            color="#3099B0"
+            className={classes.submit}
+          >
+            Send 
+          </Button>
+          
+        </form>
+      </div>
+
+    </Container>
+    </Layout>
   );
 }
-
-
-
-export default ContactForm

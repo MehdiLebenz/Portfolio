@@ -10,7 +10,7 @@ import Typography from "@material-ui/core/Typography"
 import { makeStyles } from "@material-ui/core/styles"
 import Container from "@material-ui/core/Container"
 import Layout from "../layout"
-import Recaptcha from "react-recaptcha"
+import Recaptcha from 'react-google-recaptcha'
 let recaptchaInstance
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -36,10 +36,10 @@ const useStyles = makeStyles(theme => ({
 
 export default function ContactForm() {
   const classes = useStyles()
-  const callback = console.log("thank you ! ")
-  const executeCaptcha = function () {
-    recaptchaInstance.execute()
-  }
+const callback = console.log('thank you ! ')
+const executeCaptcha = function () {
+    recaptchaInstance.execute();
+  };
   return (
     <Layout>
       <Container component="main" maxWidth="xs">
@@ -114,14 +114,14 @@ export default function ContactForm() {
               </Grid>
               <Grid item xs={12} style={{}}>
                 <Recaptcha
-                  sitekey="6Lcw7uMZAAAAADM4wF2i5os1HSGT2fkR1Z5loI4P"
-                  render="explicit"
-                  onloadCallback={callback}
-                  type="image"
-                  size="normal"
-                  fullWidth
-                />
-              </Grid>
+    sitekey="6Lcw7uMZAAAAADM4wF2i5os1HSGT2fkR1Z5loI4P"
+    render="explicit"
+    onloadCallback={callback}
+    type='image'
+    size='normal'
+    fullWidth
+  />
+  </Grid>
             </Grid>
             <Button
               type="submit"

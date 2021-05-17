@@ -1,7 +1,9 @@
 import * as React from "react"
 import Typewriter from "typewriter-effect"
 import Accounts from './Accounts'
-
+import Layout from '../layout'
+import Certifications from '../custom/certifications'
+import Services from '../custom/services'
 const Home = () => {
   return (
       
@@ -43,6 +45,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Services/>
 </div>
 
   )

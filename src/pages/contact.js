@@ -4,7 +4,7 @@ import ContactForm from '../components/contact/Contactme'
 const ContactPage = ()=>{
     return(
         <div>
-                    <ContactForm/>
+        <ContactForm/>
 
         </div>
     )

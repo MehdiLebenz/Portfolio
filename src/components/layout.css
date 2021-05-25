@@ -6,6 +6,23 @@
     margin-right: auto;
     margin-top: 6%;
     width: 50%;
+    
+}
+@media screen and (max-width: 400px) {
+  .image-gallery {
+width: 102%;
+  }
+  .image-gallery-thumbnails-wrapper {
+
+    visibility: hidden;
+
+  }
+  .image-gallery-play-button{
+    visibility: hidden;
+  }
+  .image-gallery-fullscreen-button{
+color: black;
+  }
 }
 
 .container.is-fullhd{

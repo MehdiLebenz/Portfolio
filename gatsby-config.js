@@ -5,7 +5,6 @@ module.exports = {
     author: `@MehdiLebenz`,
   },
   plugins: [
-    
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     {
@@ -16,10 +15,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/components/markdown`,
-        name: "blog",
+        name: 'blog',
       },
     },
 
@@ -42,9 +41,5 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-
   ],
-  
-  
 }
-

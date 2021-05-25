@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "My personnal blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Mehdi Benzarti <mehdilebenz@gmail.com>",
   "dependencies": {
     "@date-io/date-fns": "^2.10.8",
     "@fortawesome/fontawesome-free": "^5.15.3",
@@ -21,6 +21,8 @@
     "gatsby-source-filesystem": "^3.5.0",
     "gatsby-transformer-remark": "^4.2.0",
     "gatsby-transformer-sharp": "^3.4.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "marked": "^2.0.3",
     "medium-to-markdown": "^0.0.3",
     "prop-types": "^15.7.2",
@@ -34,7 +36,15 @@
     "typewriter-effect": "^2.17.0"
   },
   "devDependencies": {
-    "prettier": "2.2.1"
+    "@imaginary-cloud/eslint-config-react": "1.0.1",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "prettier": "^2.3.0"
   },
   "keywords": [
     "gatsby"
@@ -47,7 +57,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint ./ --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -55,5 +67,9 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "eslintConfig": {
+    "extends": "@imaginary-cloud/react"
+  },
+  "prettier": "@imaginary-cloud/prettier-config"
 }

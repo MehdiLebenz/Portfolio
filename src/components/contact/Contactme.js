@@ -1,45 +1,45 @@
-import React from "react"
-import Avatar from "@material-ui/core/Avatar"
-import Button from "@material-ui/core/Button"
-import TextField from "@material-ui/core/TextField"
-import FormControlLabel from "@material-ui/core/FormControlLabel"
-import Checkbox from "@material-ui/core/Checkbox"
-import Grid from "@material-ui/core/Grid"
-import ContactMailIcon from "@material-ui/icons/ContactMail"
-import Typography from "@material-ui/core/Typography"
-import { makeStyles } from "@material-ui/core/styles"
-import Container from "@material-ui/core/Container"
-import Layout from "../layout"
+import React from 'react'
+import Avatar from '@material-ui/core/Avatar'
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import Checkbox from '@material-ui/core/Checkbox'
+import Grid from '@material-ui/core/Grid'
+import ContactMailIcon from '@material-ui/icons/ContactMail'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
 import Recaptcha from 'react-google-recaptcha'
+import Layout from '../layout'
 let recaptchaInstance
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(1),
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
   },
   avatar: {
     margin: theme.spacing(1),
-    backgroundColor: "#3099B0",
+    backgroundColor: '#3099B0',
   },
   form: {
-    width: "100%", // Fix IE 11 issue.
+    width: '100%', // Fix IE 11 issue.
     marginTop: theme.spacing(3),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
-    backgroundColor: "#3099B0",
-    color: "white",
+    backgroundColor: '#3099B0',
+    color: 'white',
   },
 }))
 
 export default function ContactForm() {
   const classes = useStyles()
-const callback = console.log('thank you ! ')
-const executeCaptcha = function () {
-    recaptchaInstance.execute();
-  };
+  const callback = console.log('thank you ! ')
+  const executeCaptcha = function () {
+    recaptchaInstance.execute()
+  }
   return (
     <Layout>
       <Container component="main" maxWidth="xs">
@@ -114,14 +114,14 @@ const executeCaptcha = function () {
               </Grid>
               <Grid item xs={12} style={{}}>
                 <Recaptcha
-    sitekey="6Lcw7uMZAAAAADM4wF2i5os1HSGT2fkR1Z5loI4P"
-    render="explicit"
-    onloadCallback={callback}
-    type='image'
-    size='normal'
-    fullWidth
-  />
-  </Grid>
+                  sitekey="6Lcw7uMZAAAAADM4wF2i5os1HSGT2fkR1Z5loI4P"
+                  render="explicit"
+                  onloadCallback={callback}
+                  type="image"
+                  size="normal"
+                  fullWidth
+                />
+              </Grid>
             </Grid>
             <Button
               type="submit"

@@ -1,16 +1,25 @@
 import * as React from 'react'
 import Typewriter from 'typewriter-effect'
 import Accounts from './Accounts'
-import Layout from '../layout'
-import Certifications from '../custom/certifications'
 import Services from '../custom/services'
+import Experience from '../custom/experience'
+import mehdi from '../../images/mehdi.png'
+import oyez from '../../images/oyez.png'
+import psm from '../../images/psm.png'
+import pal from '../../images/pal.png'
+
+import '../layout.css'
 const Home = () => (
   <div className="container">
     <div className="avatar">
       <img
-        src="https://media-exp1.licdn.com/dms/image/C5603AQEQf2z_8T37vQ/profile-displayphoto-shrink_800_800/0/1548402321950?e=1626307200&v=beta&t=egCeGlFuvesaLkB7P1lsyBRnkCgc86YGRiJyQ1TD8HI"
-        alt="Mehdi"
+        alt="mehdi"
+        src={mehdi}
       />
+    </div>
+    <div className="badge">
+      <img className="psm" src={psm} alt="psm"/>
+      <img className="pal" src={pal} alt="pal"/>
     </div>
 
     <div className="content">
@@ -19,10 +28,11 @@ const Home = () => (
           onInit={(typewriter) => {
             typewriter.typeString('<span>Mehdi Benzarti</span> <br/>')
             typewriter
-              .typeString('<span className=test>Head of Operations </span> ')
+              .typeString('<span className=test>Head of Operations + Agile Coach </span> ')
               .start()
           }}
         />
+    <img className="oyez" src={oyez} alt="oyez"/>
       </h2>
       <p>Follow me on:</p>
       <Accounts />
@@ -46,11 +56,19 @@ const Home = () => (
       </div>
     </div>
     <h1 style={{
-          textAlign: 'center',
+          textAlign: 'right',
+          marginTop: '5%',
+      }
+    }>Where I worked  </h1>
+    <Experience />
+    <h1 style={{
+          textAlign: 'right',
           marginTop: '5%',
       }
     }>My services </h1>
     <Services />
-  </div>
+    </div>
+
+  
 )
 export default Home

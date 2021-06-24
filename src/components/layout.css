@@ -1,5 +1,6 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 @import "~react-image-gallery/styles/css/image-gallery.css";
+
 .badge{
   display: flex;
     flex-direction: row;
@@ -93,6 +94,7 @@ span a {
 	flex-direction: column;
 	justify-content: center;
   align-items: center;
+
 }
 
 .avatar {
@@ -272,6 +274,16 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+background-image: url("../images/back.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
+}
+@media only screen and (min-width: 1024px) {
+  body {
+    background-image: url("../images/backmobile.png");
+    
+  }
 }
 article,
 aside,
@@ -342,6 +354,7 @@ h1 {
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
+ 
 }
 mark {
   background-color: #ff0;

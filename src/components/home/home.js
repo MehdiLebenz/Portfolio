@@ -7,6 +7,7 @@ import mehdi from '../../images/mehdi.png'
 import oyez from '../../images/oyez.png'
 import psm from '../../images/psm.png'
 import pal from '../../images/pal.png'
+import blog from '../../images/blog.jpg'
 
 import '../layout.css'
 const Home = () => (
@@ -21,7 +22,6 @@ const Home = () => (
       <img className="psm" src={psm} alt="psm"/>
       <img className="pal" src={pal} alt="pal"/>
     </div>
-
     <div className="content">
       <h2>
         <Typewriter
@@ -61,12 +61,12 @@ const Home = () => (
       }
     }>Where I worked  </h1>
     <Experience />
-    <h1 style={{
+    {/* <h1 style={{
           textAlign: 'right',
           marginTop: '5%',
       }
     }>My services </h1>
-    <Services />
+    <Services /> */}
     </div>
 
   

@@ -31,7 +31,7 @@ const Fetchdata = () => {
           <Col md="4" className="mb-3" key={article.guid}>
             <div>
               <Card style={{width:'50%'}}>
-                <CardImg top width="60%" src={article.thumbnail} alt="img" />
+                <CardImg top width="60%" src={article.thumbnail} alt="img" style={{width:"100%"}} />
                 <CardBody>
                   <CardTitle style={{textAlign:"center"}}>
                     <a href={article.link}> {article.title}</a>

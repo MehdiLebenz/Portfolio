@@ -1,6 +1,7 @@
 import React from 'react'
 import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button'
+import { useForm, ValidationError } from '@formspree/react';
 import TextField from '@material-ui/core/TextField'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
@@ -35,6 +36,10 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function ContactForm() {
+  const [state, handleSubmit] = useForm("xwkaqegk");
+  if (state.succeeded) {
+      return <h1>Thanks for your submission!</h1>;
+  }
   const classes = useStyles()
   const callback = console.log('thank you ! ')
   const executeCaptcha = function () {
@@ -50,7 +55,7 @@ export default function ContactForm() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <form
+          <form   onSubmit={handleSubmit}
             className={classes.form}
             method="post"
             netlify-honeypot="bot-field"
@@ -69,6 +74,8 @@ export default function ContactForm() {
                   fullWidth
                   id="firstName"
                   label="First Name"
+                  errors={state.errors}
+
                   autoFocus
                 />
               </Grid>
@@ -81,6 +88,8 @@ export default function ContactForm() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="lname"
+                  errors={state.errors}
+
                 />
               </Grid>
               <Grid item xs={12}>
@@ -93,6 +102,8 @@ export default function ContactForm() {
                   name="email"
                   autoComplete="email"
                   name="_replyto"
+                  errors={state.errors}
+
                 />
               </Grid>
               <Grid item xs={12}>
@@ -102,6 +113,8 @@ export default function ContactForm() {
                   label="how can i help you ? "
                   fullWidth
                   variant="outlined"
+                  errors={state.errors}
+
                 />
               </Grid>
               <Grid item xs={12}>
@@ -120,6 +133,7 @@ export default function ContactForm() {
                   type="image"
                   size="normal"
                   fullWidth
+                  
                 />
               </Grid>
             </Grid>
@@ -130,6 +144,7 @@ export default function ContactForm() {
               color="#3099B0"
               className={classes.submit}
               onClick={executeCaptcha}
+              disabled={state.submitting}
             >
               Send
             </Button>

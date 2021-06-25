@@ -34,17 +34,22 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
   },
 }))
+const executeCaptcha = function () {
+  recaptchaInstance.execute()
+  if(!executeCaptcha) {
+    throw new console.error(error);
+    
+  }
+}
 
 export default function ContactForm() {
-  const [state, handleSubmit] = useForm("xwkaqegk");
-  if (state.succeeded) {
+  const   [state, handleSubmit] = useForm("xwkaqegk");
+  if  (state.succeeded) {
       return <h1>Thanks for your submission!</h1>;
   }
   const classes = useStyles()
   const callback = console.log('thank you ! ')
-  const executeCaptcha = function () {
-    recaptchaInstance.execute()
-  }
+
   return (
     <Layout>
       <Container component="main" maxWidth="xs">
@@ -55,15 +60,13 @@ export default function ContactForm() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <form   onSubmit={handleSubmit}
+          <form onSubmit={handleSubmit}
             className={classes.form}
-            method="post"
-            netlify-honeypot="bot-field"
-            data-netlify="true"
-            name="contact"
+            // method="post"
+            // netlify-honeypot="bot-field"
+            // data-netlify="true"
+            // name="contact"
           >
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -74,7 +77,6 @@ export default function ContactForm() {
                   fullWidth
                   id="firstName"
                   label="First Name"
-                  errors={state.errors}
 
                   autoFocus
                 />
@@ -88,7 +90,6 @@ export default function ContactForm() {
                   label="Last Name"
                   name="lastName"
                   autoComplete="lname"
-                  errors={state.errors}
 
                 />
               </Grid>
@@ -102,9 +103,8 @@ export default function ContactForm() {
                   name="email"
                   autoComplete="email"
                   name="_replyto"
-                  errors={state.errors}
-
                 />
+
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -113,7 +113,6 @@ export default function ContactForm() {
                   label="how can i help you ? "
                   fullWidth
                   variant="outlined"
-                  errors={state.errors}
 
                 />
               </Grid>

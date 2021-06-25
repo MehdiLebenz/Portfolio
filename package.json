@@ -6,6 +6,7 @@
   "author": "Mehdi Benzarti <mehdilebenz@gmail.com>",
   "dependencies": {
     "@date-io/date-fns": "^2.10.8",
+    "@formspree/react": "^2.2.3",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",

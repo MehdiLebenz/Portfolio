@@ -274,17 +274,17 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-background-image: url("../images/back.png");
+/* background-image: url("../images/back.png");
 background-repeat: no-repeat;
 background-size: cover;
-background-position: center center;
+background-position: center center; */
 }
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
   body {
     background-image: url("../images/backmobile.png");
     
   }
-}
+} */
 article,
 aside,
 details,
@@ -542,6 +542,7 @@ h3 {
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
+  text-align: right !important;
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;

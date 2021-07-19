@@ -36,6 +36,7 @@ const Home = () => (
       </h2>
       <p>Follow me on:</p>
       <Accounts />
+      
     </div>
 
     <div className="quotes">
@@ -56,7 +57,6 @@ const Home = () => (
       </div>
     </div>
     <h1 style={{
-          textAlign: 'right',
           marginTop: '5%',
       }
     }>Where I worked  </h1>

@@ -17,12 +17,12 @@ const Fetchdata = () => {
       .catch(err => console.log(err));
   }, []);
 
-  const finalData = mediumData.slice(0, 3);
+  const finalData = mediumData.slice(0, 10);
 
   return (
     <div id="blog" className="container mt-3">
       <h3 className="ui horizontal header divider mt-5">
-        <p>Blog</p>
+        <h3> My Blog</h3>
       </h3>
       {isLoading && <p>Fetching data from Medium!</p>}
 

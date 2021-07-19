@@ -45,7 +45,7 @@ const executeCaptcha = function () {
 export default function ContactForm() {
   const   [state, handleSubmit] = useForm("xwkaqegk");
   if  (state.succeeded) {
-      return <h1>Thanks for your submission!</h1>;
+      return <p> Thanks for your submission! </p>;
   }
   const classes = useStyles()
   const callback = console.log('thank you ! ')

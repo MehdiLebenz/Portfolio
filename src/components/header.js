@@ -43,7 +43,9 @@ function Header() {
                 </Link>
               </div>
               <div className="navbar-item">
+                <Link to="/projects/">
                 <a className="navbar-item">Project</a>
+                </Link>
               </div>
             </div>
             <div className="navbar-end">

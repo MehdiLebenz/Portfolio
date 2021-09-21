@@ -62,10 +62,10 @@ export default function ContactForm() {
           </Typography>
           <form onSubmit={handleSubmit}
             className={classes.form}
-            // method="post"
-            // netlify-honeypot="bot-field"
-            // data-netlify="true"
-            // name="contact"
+            method="post"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+            name="contact"
           >
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>

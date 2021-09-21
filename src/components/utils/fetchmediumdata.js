@@ -28,7 +28,7 @@ const Fetchdata = () => {
 
       <Row>
         {finalData.map(article => (
-          <Col md="4" className="mb-3" key={article.guid}>
+          <Col md="4" className="mb-6" key={article.guid}>
             <div>
               <Card style={{width:'50%'}}>
                 <CardImg top width="60%" src={article.thumbnail} alt="img" style={{width:"100%"}} />

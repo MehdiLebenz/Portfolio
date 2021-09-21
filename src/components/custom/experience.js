@@ -1,7 +1,7 @@
 import React from 'react'
 import './css/experience.css'
 import PL from '../../images/companies/PL.png'
-import oyez from '../../images/oyez.png'
+import altaviapink from '../../images/altaviapink.png'
 import ftav from '../../images/companies/ftav.jpg'
 import gmc from '../../images/companies/gmc.png'
 import tunisair from '../../images/companies/tunisair.png'
@@ -16,7 +16,7 @@ const Experience = () => {
         alt="Polytech"
         />
         <img className="oyezt"
-        src={oyez}
+        src={altaviapink}
         alt="oyez"
         />
             <img className="ftav"

@@ -7,10 +7,13 @@ import mehdi from '../../images/mehdi.png'
 import altavia from '../../images/altavia.png'
 import psm from '../../images/psm.png'
 import pal from '../../images/pal.png'
+import pspoi from '../../images/pspoi.png'
 import blog from '../../images/blog.jpg'
-
+import HomeWrapper from "./homeWrapper"
 import '../layout.css'
+import Certifications from '../custom/certifications'
 const Home = () => (
+  <HomeWrapper>
   <div className="container">
   <div class="custom-shape-divider-top-1632239671">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -26,6 +29,7 @@ const Home = () => (
     <div className="badge">
       <img className="psm" src={psm} alt="psm"/>
       <img className="pal" src={pal} alt="pal"/>
+      <img className="pal" src={pspoi} alt="PSPO"/>
     </div>
     <div className="content">
       <h2>
@@ -68,7 +72,7 @@ const Home = () => (
     }>Where I worked  </h1>
     <Experience />
     </div>
-
+    </HomeWrapper>
   
 )
 export default Home

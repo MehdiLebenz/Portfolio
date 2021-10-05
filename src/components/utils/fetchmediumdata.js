@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Row, Col } from "reactstrap";
+
 var moment = require("moment");
 
 const Fetchdata = () => {
@@ -26,12 +27,12 @@ const Fetchdata = () => {
       </h3>
       {isLoading && <p>Fetching data from Medium!</p>}
 
-      <Row>
+      <Row style={{"width":"100%", "textAlign":"center", "display":"flex", "flexDirection":"row", "justifyContent":"center"}}>
         {finalData.map(article => (
           <Col md="4" className="mb-6" key={article.guid}>
             <div>
-              <Card style={{width:'50%'}}>
-                <CardImg top width="60%" src={article.thumbnail} alt="img" style={{width:"100%"}} />
+              <Card style={{maxWidth:'100%'}}>
+                <CardImg top width="100%" src={article.thumbnail} alt="img" style={{width:"100%"}} />
                 <CardBody>
                   <CardTitle style={{textAlign:"center"}}>
                     <a href={article.link}> {article.title}</a>

@@ -14,7 +14,6 @@ import certif from '../../images/certif.png'
 function Home() {
 
   return(
-    <HomeWrapper>
   <div className="container">
     <div className="avatar">
       <img
@@ -82,7 +81,6 @@ function Home() {
 </div>
 </div>
        </div>
-    </HomeWrapper>
   
   )
 }

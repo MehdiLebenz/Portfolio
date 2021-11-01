@@ -9,11 +9,8 @@ import pal from '../../images/pal.png'
 import pspoi from '../../images/pspoi.png'
 import HomeWrapper from "./homeWrapper"
 import '../layout.css'
-import ImageData from '../custom/certification/data'
 import Certification from '../custom/certification/certifications'
 import certif from '../../images/certif.png'
-import Footer from '../custom/footer'
-import Skills from "../../components/skills/skills"
 function Home() {
 
   return(

@@ -18,7 +18,6 @@ html {
 body {
   padding: 2rem 0.5rem;
   font-family: 'Raleway',Sans-serif;
-  color: #32325d;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -56,7 +55,6 @@ body {
   .card-item {
     display: flex;
     flex-direction: column;
-    background-color: #fff;
     width: 100%;
     border-radius: 6px;
     box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
@@ -86,7 +84,6 @@ body {
   .card-title {
     font-size: 25px;
     line-height: 1.1em;
-    color: #32325d;
     margin-bottom: 0.2em;
   }
 
@@ -99,6 +96,20 @@ body {
     background-repeat: no-repeat;
     border-radius: 6px 6px 0px 0px;
     opacity: 0.91;
+    justify-content: center;
+    display: flex;
+  }
+  .image{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-style: none;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-right: 0x;
+    padding-left: 0;
+    padding-right: 0;
+
   }
 }
 

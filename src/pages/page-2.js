@@ -1,12 +1,13 @@
 import React from 'react'; 
 import Fetchdata from '../components/utils/fetchmediumdata';
-import Header from "../components/header";
+import Header from "../components/header/header";
+import Layout from "../components/layout"
+
 const SecondPage = () => {
   return (
-    <div>
-      <Header/>
+    <Layout>
     <Fetchdata/>
-    </div>
+    </Layout>
     
   )
 }

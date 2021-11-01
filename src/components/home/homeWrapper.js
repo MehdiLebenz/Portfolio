@@ -1,9 +1,165 @@
 import styled from 'styled-components'
-import Home from './home';
 
 const HomeWrapper = styled.div`
+@media screen and (min-width: 500px) {
+  .imageBlock{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.imageBlock{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+.imagecert{
+  width: 23rem;
+    margin-top: -29%;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+}
+@media screen and (min-width: 500px) {
+  .imagecert{
+    width: 40rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4%;
+    margin-bottom: auto
+}
+
+}
+
+
+
+
+.bigContainer{
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-direction: column;
+  
+}
+.certif{
+  margin-top: 3%;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+}
+
+.CertifContainer {
+  display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 500px) {
+  .carousel{
+  font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
+}
+
+}
+.carousel{
+  font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    
+}
+
+.carouselContainer{
+  margin-top: 3%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    flex-direction: column;
+}
+
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
 @import "~react-image-gallery/styles/css/image-gallery.css";
+.glide {
+  display: flex;
+  align-items: center;
+}
+
+.glide__track {
+  flex: 1;
+}
+
+.glide__slide {
+  text-align: center;
+  height: 150px;
+  line-height: 150px;
+  color: #fff;
+  background: rgb(136, 133, 133);
+  font-size: 1em;
+  font-weight: 900;
+}
+
+.glide__slide[class*="active"] {
+  background: linear-gradient(-45deg, #ed145b, #7b31f4);
+}
+
+.glide__arrows {
+  padding: 5px;
+}
+
+.glide__arrow {
+  position: relative;
+  top: 0;
+  margin: 0;
+  transform: none;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  background-color: #818999;
+  transition: all 0.2s ease-in-out;
+}
+
+.glide__arrow:hover {
+  background-color: #ed145b;
+}
+
 
 .badge{
   display: flex;
@@ -45,7 +201,7 @@ width: 102%;
   .image-gallery-fullscreen-button{
 color: black;
   }
-}
+};
 
 .container.is-fullhd{
   width: 100%;
@@ -105,7 +261,7 @@ span a {
 	width: 150px;
 	height: 150px;
 	box-sizing: border-box;
-	border: 5px #3099b0 solid;
+	border: 5px #94bbe9 solid;
 	border-radius: 50%;
 	overflow: hidden;
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
@@ -115,8 +271,8 @@ span a {
 .avatar.img { width: 100%; height: auto; }
 
 .Typewriter__wrapper span {
-  color: white;
-  background-color: #3099B0;
+  color: #2F4F4F;
+  background-color: #eeaeca;
   text-align: justify;
 }
 
@@ -183,7 +339,9 @@ span a {
   background: #f2f2f2;
   overflow: hidden;
   box-sizing: border-box;
-  box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: -10px 10px 20px rgb(148 187 233);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  margin-bottom:2rem
 }
 .blockquote::before {
   content: open-quote;
@@ -200,6 +358,7 @@ span a {
   quotes: "“" "”" "‘" "’";
   text-align: center;
   font-family: "Cursive ";
+  font-weight: bolder;
 }
 .quotes .box h2 {
   margin: 0;
@@ -256,5 +415,5 @@ color : #3273dc;
 }
 
 
-`;
-export default HomeWrapper;
+`
+export default HomeWrapper

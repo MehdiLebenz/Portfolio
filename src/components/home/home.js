@@ -1,19 +1,23 @@
 import * as React from 'react'
 import Typewriter from 'typewriter-effect'
 import Accounts from './Accounts'
-import Services from '../custom/services'
 import Experience from '../custom/experience'
 import mehdi from '../../images/mehdi.png'
 import altavia from '../../images/altavia.png'
 import psm from '../../images/psm.png'
 import pal from '../../images/pal.png'
 import pspoi from '../../images/pspoi.png'
-import blog from '../../images/blog.jpg'
 import HomeWrapper from "./homeWrapper"
 import '../layout.css'
-import Certifications from '../custom/certifications'
-const Home = () => (
-  <HomeWrapper>
+import ImageData from '../custom/certification/data'
+import Certification from '../custom/certification/certifications'
+import certif from '../../images/certif.png'
+import Footer from '../custom/footer'
+import Skills from "../../components/skills/skills"
+function Home() {
+
+  return(
+    <HomeWrapper>
   <div className="container">
   <div class="custom-shape-divider-top-1632239671">
     <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -31,6 +35,7 @@ const Home = () => (
       <img className="pal" src={pal} alt="pal"/>
       <img className="pal" src={pspoi} alt="PSPO"/>
     </div>
+  
     <div className="content">
       <h2>
         <Typewriter
@@ -49,11 +54,14 @@ const Home = () => (
     </div>
 
     <div className="quotes">
+     
       <div className="card">
         <div className="box box1">
+          <br></br>
           <blockquote className="blockquote">
             Growth and change can be painful, but nothing is more painful than
             getting stuck somewhere you don't want to be{' '}
+
           </blockquote>
           <h2>
             <Typewriter
@@ -61,18 +69,31 @@ const Home = () => (
                 typewriter.typeString('Mehdi Benzarti ').start()
               }}
             />
+            <br></br>
           </h2>
         </div>
       </div>
     </div>
-    <h1 style={{
-          marginTop: '5%',
-          float: 'left'
-      }
-    }>Where I worked  </h1>
+    <div className="carouselContainer">
+      <h3 className="carousel"> Experience:  </h3>
     <Experience />
     </div>
+    <div className="bigContainer">
+    <div className="CertifContainer">
+      <h3 className="certif"> Certifications:  </h3>
+      <div className="imageBlock">
+      <Certification/>
+<img className="imagecert" src={certif} />
+      </div>
+
+
+</div>
+</div>
+       </div>
     </HomeWrapper>
   
-)
+  )
+}
+
+
 export default Home

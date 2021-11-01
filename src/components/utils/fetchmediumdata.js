@@ -23,16 +23,18 @@ const Fetchdata = () => {
   return (
     <div id="blog" className="container mt-3">
       <h3 className="ui horizontal header divider mt-5">
-        <h3> My Blog</h3>
+        <h3 style={{
+          "display":"flex", "flexDirection":"column",alignItems:"center", marginBottom:"5%"
+        }}> My Blog</h3>
       </h3>
       {isLoading && <p>Fetching data from Medium!</p>}
 
-      <Row style={{"width":"100%", "textAlign":"center", "display":"flex", "flexDirection":"row", "justifyContent":"center"}}>
+      <Row style={{"width":"100%", "textAlign":"center", "display":"flex", "flexDirection":"column", "justifyContent":"center",alignItems:"center", marginBottom:"3%"}}>
         {finalData.map(article => (
           <Col md="4" className="mb-6" key={article.guid}>
             <div>
               <Card style={{maxWidth:'100%'}}>
-                <CardImg top width="100%" src={article.thumbnail} alt="img" style={{width:"100%"}} />
+                <CardImg top  src={article.thumbnail} alt="img" style={{maxWidth:"70%"}} />
                 <CardBody>
                   <CardTitle style={{textAlign:"center"}}>
                     <a href={article.link}> {article.title}</a>

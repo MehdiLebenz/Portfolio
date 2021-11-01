@@ -2,26 +2,50 @@ import * as React from 'react'
 import { FaGithub, FaAddressCard, FaMedium, FaLinkedin } from 'react-icons/fa'
 
 const Accounts = () => (
-  <nav className="nav">
+  <nav className="navItems">
     <div className="level-item has-text-centered">
       <div>
-        <a href="https://github.com/MehdiLebenz" className="titlenav">
-          <FaGithub />
+        <a href="https://github.com/MehdiLebenz" className="">
+          <FaGithub style={{
+            overflow:"hidden",
+            display:'flex',
+            alignItems:"center",
+            justifyContent:"center",
+            alignContent:"center",
+            fontSize : "32px",
+            color: "black",
+          }}/>
         </a>
       </div>
     </div>
     <div className="level-item has-text-centered">
       <div>
-        <a href="mailto:mehdilebenz@gmail.com" className="titlenav">
-          <FaAddressCard />
+        <a href="mailto:mehdilebenz@gmail.com" className="">
+          <FaAddressCard style={{
+            overflow:"hidden",
+            display:'flex',
+            alignItems:"center",
+            justifyContent:"center",
+            alignContent:"center",
+            fontSize : "32px",
+            color: "black",
+          }}/>
         </a>
       </div>
     </div>
     <div className="level-item has-text-centered">
       <div>
-        <a href="https://medium.com/@mehdilebenz" className="titlenav">
+        <a href="https://medium.com/@mehdilebenz" className="">
           {' '}
-          <FaMedium />{' '}
+          <FaMedium style={{
+            overflow:"hidden",
+            display:'flex',
+            alignItems:"center",
+            justifyContent:"center",
+            alignContent:"center",
+            fontSize : "32px",
+            color: "black",
+          }} />{' '}
         </a>
       </div>
     </div>
@@ -29,9 +53,17 @@ const Accounts = () => (
       <div>
         <a
           href="https://www.linkedin.com/in/mehdi-benzarti-307bb2121"
-          className="titlenav"
+          className=""
         >
-          <FaLinkedin />
+          <FaLinkedin style={{
+            overflow:"hidden",
+            display:'flex',
+            alignItems:"center",
+            justifyContent:"center",
+            alignContent:"center",
+            fontSize : "32px",
+            color: "black",
+          }} />
         </a>
       </div>
     </div>

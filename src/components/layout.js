@@ -1,10 +1,10 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import Footer from '.././components/custom/footer'
-import Header from "./header"
-import Certifications from './custom/certifications'
+import Header from "../components/header/header"
 import "./layout.css"
+import Footer from '../components/custom/footer'
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -18,12 +18,14 @@ const Layout = ({ children }) => {
 
   return (
     <div className="layout" style={{width:"100%", height:"100vh"}}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="mainContainer"
       >
+        <header>
+          <Header/>
+        </header>
         <main>{children}
         <footer>
-        <Footer/>
+          <Footer/>
         </footer>
         </main>
 

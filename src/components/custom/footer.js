@@ -35,6 +35,7 @@ const Fotter = () => {
         </div>
       </div>
     </div>
+    
     </FooterWrapper>
   )
 }

@@ -8,7 +8,7 @@ import hyperspread from '../../images/projects/hyperspread.jpeg'
 import monoprix from '../../images/projects/monoprix.png'
 import lacoste from '../../images/projects/lacoste.png'
 import Volkswagen from '../../images/projects/Volkswagen.png'
-
+import '../layout.css'
 
 
 

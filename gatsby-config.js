@@ -1,4 +1,5 @@
 module.exports = {
+  plugins: [`gatsby-plugin-styled-components`],
   siteMetadata: {
     title: `Mehdi Benzarti `,
     description: ``,

@@ -9,11 +9,19 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: "@sentry/gatsby",
+      options: {
+        dsn: "https://84a28838d6764036a328cfc58f333230@o580068.ingest.sentry.io/6056534",
+        sampleRate: 0.7,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+      
     },
 
     `gatsby-transformer-sharp`,

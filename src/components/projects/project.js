@@ -22,8 +22,8 @@ const Projects = () => {
         <img className="image" src={lactalis}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">Lactalis - Project technical Manager</h2>
-        <p class="card-intro">Migration of a 300 GB database to an AWS environment on Postgresql using Lambda and glue services
+        <h2 class="card-title">Lactalis - Technical project manager (2021) </h2>
+        <p class="card-intro">mysql database transfer to Postgresql , development of dedicated microservice to manage the conditions of import and export, connecting of daily flows and verification of all conditions, for BI side connecting Domo and server management 
 .</p>
       </div>
     </div>
@@ -34,8 +34,8 @@ const Projects = () => {
         <img className="image" src={porsche}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">A new trail you can't miss</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="card-title"> Porsche France - Project Director (2020)</h2>
+        <p class="card-intro">Lead Management mobile application <br/>  </p>
       </div>
     </div>
   </div>
@@ -45,8 +45,8 @@ const Projects = () => {
         <img className="image" src={carrefour}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">Inside the Outdoors</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="card-title">Scrum Master - Carrefour Nova (2019)</h2>
+        <p class="card-intro">Mobile application <br/> #react-native #nodejs #GCP #graphql  </p>
       </div>
     </div>
   </div>
@@ -56,8 +56,10 @@ const Projects = () => {
       <img className="image"  src={monoprix}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">Essential hiking hacks</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="card-title">Monoprix France - Project Manager (2018) </h2>
+        <p class="card-intro">Complete overhaul of the monoprix site, order funnel, product management, payment, stock management, delivery management.. <br/> 
+        #Reactjs #Apollo #Nodejs #GCP #GRAPHQL #Microservices
+        </p>
       </div>
     </div>
   </div>
@@ -67,8 +69,8 @@ const Projects = () => {
       <img className="image"  src={hyperspread}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">Discovering this hidden gem</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="card-title">HyperSpread - Project Director (2020) </h2>
+        <p class="card-intro">First Saas dedicated to local marketing in France<br/> #REACT #NODE #MICROSERVICES #GRAPHQL #GRAPHQL  </p>
       </div>
     </div>
   </div>
@@ -78,8 +80,8 @@ const Projects = () => {
       <img className="image"  src={vyv}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">1 Day routes for this weekend</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="card-title">Scrum Master - VYV (2020)</h2>
+        <p class="card-intro">Healthcare plateform <br/>#REACT #NODE #MICROSERVICES #GRAPHQL #GRAPHQL</p>
       </div>
     </div>
   </div>
@@ -89,8 +91,8 @@ const Projects = () => {
       <img className="image" src={lacoste}/>
       </div>
       <div class="card-info">
-        <h2 class="card-title">1 Day routes for this weekend</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <h2 class="card-title">Lacoste - Technical Project Manager (2021) </h2>
+        <p class="card-intro"> Digital sales experience in 2 Showrooms (Paris / Shanghai) for their wholesaler..</p>
       </div>
     </div>
   </div>
@@ -101,7 +103,7 @@ const Projects = () => {
       </div>
       <div class="card-info">
         <h2 class="card-title">1 Day routes for this weekend</h2>
-        <p class="card-intro">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <p class="card-intro">Creation of 2 distinct platforms (ACCESSORIES SITES, MONTHLY FILE) to revitalize the commercial dynamics of the "DPS" parts and services department. <br/> #SHOPIFY #NEXTJS #VERCEL #NODEJS #PIMCORE </p>
       </div>
     </div>
   </div>

@@ -2206,6 +2206,11 @@
   resolved "https://registry.npmjs.org/@turist/time/-/time-0.0.2.tgz"
   integrity sha512-qLOvfmlG2vCVw5fo/oz8WAZYlpe5a5OurgTj3diIxJCdjRHpapC+vQCz3er9LV79Vcat+DifBjeAhOAdmndtDQ==
 
+"@typeform/embed@^1.18.1":
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/@typeform/embed/-/embed-1.22.1.tgz#fb9ee2a9391829f7b8dd0675d5523f136085b792"
+  integrity sha512-iaEE3JDQ9anYh8lUlo94c0TrYT8j09nRaByuOs5YHIvG+aOySAYybI7Pc7PO5WrZLlPb2Em9jVCFLPRmBqt6QA==
+
 "@types/acorn@^4.0.0":
   version "4.0.6"
   resolved "https://registry.npmjs.org/@types/acorn/-/acorn-4.0.6.tgz"
@@ -12333,6 +12338,13 @@ react-transition-group@^4.4.0, react-transition-group@^4.4.2:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-typeform-embed@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/react-typeform-embed/-/react-typeform-embed-1.0.7.tgz#c3c5ab7d8b0818bd252e115c068f2d97de4f7f30"
+  integrity sha512-17Yzac211Xjy0hB9mfGI6H/pGaml+olQtNlhDcTEvgTp42MHKvDDFjA1dEKn+sbqljm/NSLrd0DLB/uVNnXASg==
+  dependencies:
+    "@typeform/embed" "^1.18.1"
 
 react@^17.0.1:
   version "17.0.1"

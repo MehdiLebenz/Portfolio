@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
 import ImageData from "./data";
 import  CertificationWrapper from './certificationWrapper'

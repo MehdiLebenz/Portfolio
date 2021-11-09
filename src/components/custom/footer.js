@@ -11,10 +11,11 @@ const Fotter = () => {
         <br />
         <br />
         <div className="footercontainer">
-          <a href="/myskills">About me</a>
-          <a href="/projects">Projects</a>
-          <a href="/page-2">My Blog</a>
-          <a href="#">Contact me</a>
+     
+          <a href="/myskills"> About me </a>
+          <a href="/projects"> My Projects</a>
+          <a href="/page-2">  My Blog</a>
+          <a href="#"> Contact me </a>
 
         </div>
         <div className="divfooter">

@@ -12,7 +12,7 @@ const FooterWrapper = styled.div`
 .footercontainer {
   border: 1px rgb(201, 199, 199);
   border-style: solid none solid none;
-  width: 900px;
+  width: auto;
   padding: 10px 50px;
   margin: 0 auto;
   margin-bottom: 10px;

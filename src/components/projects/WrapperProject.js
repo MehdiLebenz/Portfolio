@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-@import url('https://fonts.googleapis.com/css?family=Raleway');
-
-
-// Mobile first
-*,
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');*,
 *::before,
 *::after { 
   box-sizing: border-box;
@@ -17,8 +14,7 @@ html {
 
 body {
   padding: 2rem 0.5rem;
-  font-family: 'Raleway',Sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto', sans-serif;  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   margin: 0;
@@ -45,6 +41,7 @@ body {
   padding: 1rem;
   margin-bottom: 2rem;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
   @media(min-width: 40rem) {
     width: 50%;
   }
@@ -79,12 +76,14 @@ body {
     flex-direction: column;
     padding: 1rem;
     line-height: 1.5em;
+    
   }
 
   .card-title {
     font-size: 25px;
     line-height: 1.1em;
     margin-bottom: 0.2em;
+    font-family: 'Roboto', sans-serif;
   }
 
   // Images
@@ -114,5 +113,5 @@ body {
 }
 
 
-`
+`;
 export default Wrapper;

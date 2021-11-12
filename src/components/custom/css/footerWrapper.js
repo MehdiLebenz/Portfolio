@@ -1,15 +1,15 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const FooterWrapper = styled.div`
-
-
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap';
 .foot {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;  text-align: center;
+  font-family: 'Roboto', sans-serif;  text-align: center;
 }
 
 
 
 .footercontainer {
+  font-family: 'Roboto', sans-serif;
   border: 1px rgb(201, 199, 199);
   border-style: solid none solid none;
   width: auto;
@@ -22,12 +22,14 @@ const FooterWrapper = styled.div`
     align-content: center;
     justify-content: center;
     align-items: center;
+    
 }
 
 a {
   text-decoration: none;
   margin-left: 10px;
   color: black;
+  font-family: 'Roboto', sans-serif;
 }
 
 p {
@@ -35,12 +37,14 @@ p {
   width: 70px;
   margin: 0 auto;
   margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 
 .copyright {
   opacity: 0.6;
   color: gray;
+  font-family: 'Roboto', sans-serif;
 }
 .divfooter{
     display: flex;
@@ -78,5 +82,5 @@ p {
 }
 
 
-`
+`;
 export default FooterWrapper;

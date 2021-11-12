@@ -1,9 +1,8 @@
-import styled from 'styled-components'; 
+import styled from 'styled-components';
 
- const HeaderWrapper = styled.div`
-body {
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  margin: 0;
+const HeaderWrapper = styled.div`
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');body {
+  font-family: 'Roboto', sans-serif;  margin: 0;
   width:100%;
   height:100vh
 }
@@ -42,7 +41,6 @@ body {
   transition: 0.5s;
   text-decoration: none;
   margin-left: 3%;
-  font-family: cursive
 
 }
 .Nav a:hover {
@@ -137,4 +135,4 @@ body {
 }
 
 `;
-export default HeaderWrapper
+export default HeaderWrapper;

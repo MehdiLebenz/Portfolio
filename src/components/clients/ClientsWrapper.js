@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-const ExperienceWrapper = styled.div`
+const ClientsWrapper = styled.div`
 
-.carouselContainer { 
+.carouselContainerClient { 
     width: 100%;
     padding: 10px;
     display: -webkit-box;
@@ -42,7 +42,7 @@ const ExperienceWrapper = styled.div`
     display: none;
   }
   .carousel .slide img {
-    max-width: 50%;
+    max-width: 28%;
     vertical-align: top;
     border: 0;
   }
@@ -52,19 +52,19 @@ const ExperienceWrapper = styled.div`
   .carousel .slider-wrapper {
     overflow: hidden;
     /* margin: auto; */
-    width: 100%;
-    transition: height 0.15s ease-in 0s;
+    width: 90%;
+    transition: height 0.45s ease-in 0s;
     margin: auto;
   }
   @media screen and (min-width: 500px) {
     .carousel .slider-wrapper {
       overflow: hidden;
       width: 70%;
-      transition: height 0.15s ease-in 0s;
+      transition: height 0.25s ease-in 0s;
     }
   }
   .carousel-root {
   }
 `;
 
-export default ExperienceWrapper;
+export default ClientsWrapper;

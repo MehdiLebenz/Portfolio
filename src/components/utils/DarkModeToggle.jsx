@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { CSSTransition } from "react-transition-group";
-import "../layout.css";
+import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
+import '../layout.css';
 
 export default function DarkModeToggle() {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     darkMode
-      ? document.body.classList.add("dark")
-      : document.body.classList.remove("dark");
+      ? document.body.classList.add('dark')
+      : document.body.classList.remove('dark');
   }, [darkMode]);
 
   return (

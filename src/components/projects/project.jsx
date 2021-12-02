@@ -21,7 +21,7 @@ const Projects = function projects() {
             </div>
             <div className="card-info">
               <h2 className="card-title">
-                ABCDE{' '}
+                Lactalis - Technical project manager (2021){' '}
               </h2>
               <p className="card-intro">
                 mysql database transfer to Postgresql , development of dedicated
